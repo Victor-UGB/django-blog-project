@@ -1,9 +1,11 @@
 from django.db import models
 from django.urls import reverse
+from . import forms
 
 # Create your models here.
 class auth_User(models.Model):
-    name = models.TextField
+    username = forms.User
+    password = forms.User
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
